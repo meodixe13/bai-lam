@@ -20,3 +20,5 @@ void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2);
 
 // Hàm chia kẹo theo Giải thuật Tham lam
 void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon);
+
+/* NỘI DUNG */
