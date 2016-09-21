@@ -4,7 +4,7 @@ using namespace std;
 
 struct TapGoiKeo {
   int goikeo[50]; // N < 50
-  unsigned soluong;
+  unsigned soluong, tongsokeo;
 };
 
 /* CÁC HÀM CẦN XÂY DỰNG */
@@ -23,7 +23,7 @@ void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon);
 
 // Hàm khởi tạo
 void khoitao (TapGoiKeo & keo) {
-  keo.soluong = 0;
+  keo.soluong = keo.tongsokeo = 0;
 }
 
 /* NỘI DUNG */
