@@ -1,7 +1,8 @@
 // Sử dụng C-Free 5
 // Giải thuật Tham lam
 
-#include <iostream>
+#include <iostream> // cin, cout, endl
+#include <algorithm> // swap
 
 using namespace std;
 
@@ -27,6 +28,9 @@ void xuat (TapGoiKeo nguoinhan);
 // Hàm chia kẹo theo Giải thuật Tham lam
 void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon);
 
+// Hàm sắp xếp theo thứ tự giảm dần
+void sapxep (TapGoiKeo & mang);
+
 // Hàm khởi tạo
 void khoitao (TapGoiKeo &);
 
@@ -41,6 +45,7 @@ unsigned trituyetdoi (int n);
 int main () {
   TapGoiKeo nguon, nguoinhan1, nguoinhan2;
   nhap(nguon);
+  sapxep(nguon);
   khoitao(nguoinhan1);
   khoitao(nguoinhan2);
   chiakeo(nguoinhan1, nguoinhan2, nguon);
