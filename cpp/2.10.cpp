@@ -79,11 +79,13 @@ void nhap (TapGoiKeo &nguon) {
 }
 
 void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2) {
-  cout << "Chenh lech: " << trituyetdoi(nguoinhan1.tongsokeo - nguoinhan2.tongsokeo) << endl;
+  cout << "Chenh lech: " << trituyetdoi(nguoinhan1.tongsokeo - nguoinhan2.tongsokeo) << endl << endl;
   cout << "Nguoi nhan 1:\n";
   xuat(nguoinhan1);
+  cout << endl;
   cout << "Nguoi nhan 2:\n";
   xuat(nguoinhan2);
+  cout << endl;
 }
 
 void xuat (TapGoiKeo nguoinhan) {
