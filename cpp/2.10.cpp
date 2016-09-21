@@ -13,7 +13,7 @@ struct TapGoiKeo {
 int main ();
 
 // Hàm nhập: Nhập số lượng và các gói kẹo được chia
-void nhap (TapGoiKeo &nguon);
+void nhap (TapGoiKeo & nguon);
 
 // Hàm xuất
 void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2);
