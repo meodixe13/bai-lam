@@ -69,7 +69,7 @@ void themkeo (TapGoiKeo & nguoinhan, unsigned sokeo) {
 void nhap (TapGoiKeo &nguon) {
   cout << "Nhap so goi keo (<50): ";
   cin >> nguon.soluong;
-  for(int i = 0; i < nguon.soluong; i++) {
+  for(unsigned i = 0; i < nguon.soluong; i++) {
     unsigned goikeo;
     cout <<"Nhap so luong goi keo thu " << nguon.goikeo[i] << ": ";
     cin >> goikeo;
@@ -84,4 +84,18 @@ void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2) {
   xuat(nguoinhan1);
   cout << "Nguoi nhan 2:\n";
   xuat(nguoinhan2);
+}
+
+void xuat (TapGoiKeo nguoinhan) {
+  cout << "Tong so goi: " << nguoinhan.soluong << endl;
+  cout << "Tong so keo: " << nguoinhan.tongsokeo << endl;
+  cout << "Goi keo da nhan:";
+  for (unsigned i = 0; i != nguoinhan.soluong; ++i) {
+    cout << ' ' << nguoinhan.goikeo[i];
+  }
+  cout << endl;
+}
+
+unsigned trituyetdoi (int n) {
+  return n > 0 ? n : -n;
 }
