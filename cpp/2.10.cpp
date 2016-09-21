@@ -59,3 +59,16 @@ void themkeo (TapGoiKeo & nguoinhan, unsigned sokeo) {
   nguoinhan.goikeo[vitri] = sokeo;
   nguoinhan.soluong = vitri + 1;
 }
+
+int nhap(TapGoiKeo &nguon)
+{
+  int n;
+  cout<<"Nhap so goi keo (<50): ";
+  cin>>n;
+  for(int i = 0; i < n; i++)
+  {
+    cout<<"Nhap so luong goi keo thu "<<nguon.goikeo[i]<<":";
+    cin>>nguon.soluong;
+    nguon.soluong += nguon.soluong;
+  }
+}
