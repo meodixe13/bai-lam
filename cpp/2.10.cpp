@@ -71,7 +71,7 @@ void nhap (TapGoiKeo &nguon) {
   cin >> nguon.soluong;
   for(unsigned i = 0; i < nguon.soluong; i++) {
     unsigned goikeo;
-    cout <<"Nhap so luong goi keo thu " << nguon.goikeo[i] << ": ";
+    cout <<"Nhap so luong goi keo thu " << i << ": ";
     cin >> goikeo;
     nguon.goikeo[i] = goikeo;
     nguon.tongsokeo += goikeo;
