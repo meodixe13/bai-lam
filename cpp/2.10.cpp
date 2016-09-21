@@ -1,3 +1,6 @@
+// Sử dụng C-Free 5
+// Giải thuật Tham lam
+
 #include <iostream>
 
 using namespace std;
