@@ -21,11 +21,18 @@ void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2);
 // Hàm chia kẹo theo Giải thuật Tham lam
 void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon);
 
+// Hàm khởi tạo
+void khoitao (TapGoiKeo & keo) {
+  keo.soluong = 0;
+}
+
 /* NỘI DUNG */
 
 int main () {
   TapGoiKeo nguon, nguoinhan1, nguoinhan2;
   nhap(nguon);
+  khoitao(nguoinhan1);
+  khoitao(nguoinhan2);
   chiakeo(nguoinhan1, nguoinhan2, nguon);
   xuat(nguoinhan1, nguoinhan2);
   return 0;
