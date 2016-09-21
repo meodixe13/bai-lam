@@ -8,7 +8,8 @@ using namespace std;
 
 struct TapGoiKeo {
   int goikeo[50]; // N < 50
-  unsigned soluong, tongsokeo;
+  unsigned soluong; // Số lượng gói
+  unsigned tongsokeo; // Tổng số kẹo
 };
 
 /* CÁC HÀM CẦN XÂY DỰNG */
