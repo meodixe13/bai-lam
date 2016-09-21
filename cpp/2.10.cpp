@@ -65,10 +65,12 @@ int nhap(TapGoiKeo &nguon)
   int n;
   cout << "Nhap so goi keo (<50): ";
   cin >> n;
-  for(int i = 0; i < n; i++)
-  {
+  nguon.soluong = n;
+  for(int i = 0; i < n; i++) {
+    unsigned goikeo;
     cout <<"Nhap so luong goi keo thu " << nguon.goikeo[i] << ": ";
-    cin >> nguon.soluong;
-    nguon.soluong += nguon.soluong;
+    cin >> goikeo;
+    nguon.goikeo[i] = goikeo;
+    nguon.tongsokeo += goikeo;
   }
 }
