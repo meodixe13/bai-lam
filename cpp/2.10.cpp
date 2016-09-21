@@ -67,8 +67,8 @@ int nhap(TapGoiKeo &nguon)
   cin>>n;
   for(int i = 0; i < n; i++)
   {
-    cout<<"Nhap so luong goi keo thu "<<nguon.goikeo[i]<<":";
-    cin>>nguon.soluong;
+    cout <<"Nhap so luong goi keo thu " << nguon.goikeo[i] << ": ";
+    cin >> nguon.soluong;
     nguon.soluong += nguon.soluong;
   }
 }
