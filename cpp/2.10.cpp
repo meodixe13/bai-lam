@@ -22,3 +22,11 @@ void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2);
 void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon);
 
 /* NỘI DUNG */
+
+int main () {
+  TapGoiKeo nguon, nguoinhan1, nguoinhan2;
+  nhap(nguon);
+  chiakeo(nguoinhan1, nguoinhan2, nguon);
+  xuat(nguoinhan1, nguoinhan2);
+  return 0;
+}
