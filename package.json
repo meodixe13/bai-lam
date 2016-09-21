@@ -1,0 +1,8 @@
+{
+  "name": "bai-lam",
+  "version": "0.0.0",
+  "scripts": {
+    "clean": "bash -c './sh/clean.sh'"
+  },
+  "license": "GPL-3.0"
+}
