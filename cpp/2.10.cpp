@@ -22,9 +22,10 @@ void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2);
 void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon);
 
 // Hàm khởi tạo
-void khoitao (TapGoiKeo & keo) {
-  keo.soluong = keo.tongsokeo = 0;
-}
+void khoitao (TapGoiKeo &);
+
+// Hàm thêm kẹo
+void themkeo (TapGoiKeo & nguoinhan, unsigned sokeo);
 
 /* NỘI DUNG */
 
@@ -36,4 +37,25 @@ int main () {
   chiakeo(nguoinhan1, nguoinhan2, nguon);
   xuat(nguoinhan1, nguoinhan2);
   return 0;
+}
+
+void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon) {
+  for (unsigned i = 0; i != nguon.soluong; ++i) {
+    if (nguoinhan1.tongsokeo < nguoinhan2.tongsokeo) {
+      themkeo(nguoinhan1, nguon.goikeo[i]);
+    } else {
+      themkeo(nguoinhan2, nguon.goikeo[i]);
+    }
+  }
+}
+
+void khoitao (TapGoiKeo & keo) {
+  keo.soluong = keo.tongsokeo = 0;
+}
+
+void themkeo (TapGoiKeo & nguoinhan, unsigned sokeo) {
+  unsigned vitri = nguoinhan.soluong;
+  nguoinhan.tongsokeo += sokeo;
+  nguoinhan.goikeo[vitri] = sokeo;
+  nguoinhan.soluong = vitri + 1;
 }
