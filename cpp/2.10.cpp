@@ -90,9 +90,9 @@ void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2) {
 }
 
 void xuat (TapGoiKeo nguoinhan) {
-  cout << "Tong so goi: " << nguoinhan.soluong << endl;
-  cout << "Tong so keo: " << nguoinhan.tongsokeo << endl;
-  cout << "Goi keo da nhan:";
+  cout << " - Tong so goi: " << nguoinhan.soluong << endl;
+  cout << " - Tong so keo: " << nguoinhan.tongsokeo << endl;
+  cout << " - Goi keo da nhan:";
   for (unsigned i = 0; i != nguoinhan.soluong; ++i) {
     cout << ' ' << nguoinhan.goikeo[i];
   }
