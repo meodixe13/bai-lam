@@ -18,6 +18,9 @@ void nhap (TapGoiKeo & nguon);
 // Hàm xuất
 void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2);
 
+// Hàm xuất một người nhận
+void xuat (TapGoiKeo nguoinhan);
+
 // Hàm chia kẹo theo Giải thuật Tham lam
 void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon);
 
@@ -26,6 +29,9 @@ void khoitao (TapGoiKeo &);
 
 // Hàm thêm kẹo
 void themkeo (TapGoiKeo & nguoinhan, unsigned sokeo);
+
+// Trị tuyệt đối
+unsigned trituyetdoi (int n);
 
 /* NỘI DUNG */
 
@@ -60,7 +66,7 @@ void themkeo (TapGoiKeo & nguoinhan, unsigned sokeo) {
   nguoinhan.soluong = vitri + 1;
 }
 
-void nhap(TapGoiKeo &nguon) {
+void nhap (TapGoiKeo &nguon) {
   cout << "Nhap so goi keo (<50): ";
   cin >> nguon.soluong;
   for(int i = 0; i < nguon.soluong; i++) {
@@ -71,8 +77,11 @@ void nhap(TapGoiKeo &nguon) {
     nguon.tongsokeo += goikeo;
   }
 }
-void xuat(TapGoiKeo nguoinhan1,TapGoiKeo nguoinhan2)
-{
-  cout<<"So goi keo em thu nhat nhan duoc "<<nguoinhan1;
-  cout<<"So goi keo em thu hai nhan duoc "<<nguoinhan2;
+
+void xuat (TapGoiKeo nguoinhan1, TapGoiKeo nguoinhan2) {
+  cout << "Chenh lech: " << trituyetdoi(nguoinhan1.tongsokeo - nguoinhan2.tongsokeo) << endl;
+  cout << "Nguoi nhan 1:\n";
+  xuat(nguoinhan1);
+  cout << "Nguoi nhan 2:\n";
+  xuat(nguoinhan2);
 }
