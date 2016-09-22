@@ -10,6 +10,7 @@ struct GiayBac {
 	unsigned SoTienKhachHang; // Số tiền khách hàng
 	bool KiemTra;
 };
+
 // Chương trình chính 
 int main ();
 
@@ -19,13 +20,13 @@ void nhap (GiayBac &); //
 // Hàm xuất
 void xuat (GiayBac); // 
 
-//Hàm tính toán số tiền ít nhất 
+// Hàm tính toán số tiền ít nhất 
 void chiatien (GiayBac &, GiayBac); 
 
-//Hàm sắp xếp mênh giá các tờ tiền từ lớn > thấp
+// Hàm sắp xếp mênh giá các tờ tiền từ lớn > thấp
 void sapxep (GiayBac &);
 
-//Ham Khởi tạo
+// Hàm Khởi tạo
 void khoitao (GiayBac &); 
 
 /* NỘI DUNG */ 
@@ -55,7 +56,7 @@ void nhap (GiayBac & Tien) {
 }
 
 void xuat (GiayBac SoTienRut) {
-	if (SoTienRut.KiemTra == true ){
+	if (SoTienRut.KiemTra == true ) {
 	  for(int i = 0; i < SoTienRut.SoLuong; i++){
 	  	if ( SoTienRut.SoTo[i] == 0 ) continue;
 	  	cout<<"Menh gia:"<<SoTienRut.LoaiTien[i];
@@ -64,23 +65,22 @@ void xuat (GiayBac SoTienRut) {
   	}
 	}
 	else 
-  	cout<<"Khong doi duoc";
+  	cout << "Khong doi duoc\n";
 }
 
-void sapxep (GiayBac &Tien){
-	int temp;
-	for(unsigned i = 0; i != Tien.SoLuong;++i)
+void sapxep (GiayBac & Tien) {
+	for(unsigned i = 0; i != Tien.SoLuong; ++i)
 		for(unsigned j = i; j != Tien.SoLuong; ++j)
 			if(Tien.LoaiTien[i] < Tien.LoaiTien[j])
 			  swap(Tien.LoaiTien[i], Tien.LoaiTien[j])
 }
 
-void khoitao(GiayBac &Tien){
+void khoitao (GiayBac & Tien) {
 	Tien.SoLuong = Tien.SoTienKhachHang = 0;
 }
 
 
-void chiatien(GiayBac &SoTienRut,GiayBac Tien){
+void chiatien (GiayBac & SoTienRut, GiayBac Tien) {
 	SoTienRut.KiemTra = true;
 	int tiengoc = Tien.SoTienKhachHang;
 	for(unsigned i = 0; tiengoc != 0; ++i){
@@ -88,10 +88,10 @@ void chiatien(GiayBac &SoTienRut,GiayBac Tien){
 		SoTienRut.LoaiTien[i] = Tien.LoaiTien[i];
 		SoTienRut.SoLuong++;
 		tiengoc -= SoTienRut.SoTo[i] * Tien.LoaiTien[i];
-		if ( SoTienRut.SoLuong == Tien.SoLuong )
-			if (tiengoc > 0){
+		if (SoTienRut.SoLuong == Tien.SoLuong)
+			if (tiengoc > 0) {
 				SoTienRut.KiemTra = false;
-			 	break;
+			 	return;
 			}
 	}
 }
