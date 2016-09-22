@@ -46,12 +46,15 @@ void chondovat (DoVat * & dich, unsigned & soluongdich, unsigned succhua, DoVat 
   soluongdich = 0; // Khởi tạo
   // YOUR TEXT HERE...
 }
+
 void nhap (DoVat * & mang, unsigned & soluong, unsigned & succhua) {
-  cout<<" Nhap so luong : ";cin>>soluong;
-  cout<<" Nhap suc chua : ";cin>>succhua;
+  cout << " Nhap so luong : ";
+  cin >> soluong;
+  cout << " Nhap suc chua : ";
+  cin >> succhua;
   mang = new int[soluong];
-  for(int i=0;i<soluong;i++){
-  cout<<" Nhap khoi luong do vat thu "<<i<<" : ";
-  cin>>mang[i];
+  for(int i = 0; i != soluong; ++i) {
+    cout << "Nhap khoi luong do vat thu "<<i<<" : ";
+    cin >> mang[i];
   }
 }
