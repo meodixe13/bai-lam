@@ -1,25 +1,25 @@
-#include <iostream>
+#include <iostream> // cin, cout, endl
+#include <algorithm> // swap
+
 using namespace std;
 
-struct GiayBac
-{
-    unsigned LoaiTien[50];
+struct GiayBac {
+  unsigned LoaiTien[50];
 	unsigned SoTo[50];
 	unsigned SoLuong;
 	unsigned SoTienKhachHang;
 	bool KiemTra;
 };
 
-int main();
-void nhap(GiayBac &);
-void xuat(GiayBac);
-void chiatien(GiayBac &,GiayBac );
-void sapxep(GiayBac &);
-void khoitao(GiayBac &);
+int main ();
+void nhap (GiayBac &);
+void xuat (GiayBac);
+void chiatien (GiayBac &,GiayBac );
+void sapxep (GiayBac &);
+void khoitao (GiayBac &);
 
-int main()
-{
-    GiayBac Tien,SoTienRut;
+int main () {
+  GiayBac Tien,SoTienRut;
 	khoitao(Tien);
 	khoitao(SoTienRut);
 	nhap(Tien);
@@ -28,7 +28,7 @@ int main()
 	xuat(SoTienRut);
 }
 
-void nhap(GiayBac &Tien)
+void nhap (GiayBac & Tien)
 {
 	unsigned MenhGia;
 	cout<<"Nhap so loai giay bac: ";
