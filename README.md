@@ -16,6 +16,7 @@ Toàn bộ code C++ được lưu ở thư mục `/cpp`
  * Nguyễn Bá Phú
  * Nguyễn Ngọc Quang
  * Nguyễn Minh Thắng
+ * Đỗ Hồng Sơn
 
 ## Code style
  * Thụt dòng: 2 dấu cách
