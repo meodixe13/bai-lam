@@ -64,6 +64,13 @@ void chiakeo (TapGoiKeo & nguoinhan1, TapGoiKeo & nguoinhan2, TapGoiKeo nguon) {
   }
 }
 
+void sapxep (TapGoiKeo & mang) {
+	for(unsigned i=0; i<mang.soluong; ++i)
+		for(unsigned j=i+1; j<mang.soluong; ++j)
+		  if(mang.goikeo[i] < mang.goikeo[j])
+			  swap(mang.goikeo[i], mang.goikeo[j]);
+}
+
 void khoitao (TapGoiKeo & keo) {
   keo.soluong = keo.tongsokeo = 0;
 }
