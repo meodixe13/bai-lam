@@ -4,22 +4,34 @@
 using namespace std;
 
 struct GiayBac {
-  unsigned LoaiTien[50];
-	unsigned SoTo[50];
-	unsigned SoLuong;
-	unsigned SoTienKhachHang;
+  unsigned LoaiTien[50]; // Lưu trữ mệnh giá các loại tiền
+	unsigned SoTo[50]; // Số tờ tiền của mỗi mệnh giá 
+	unsigned SoLuong; // Số lượng các loại tiền
+	unsigned SoTienKhachHang; // Số tiền khách hàng
 	bool KiemTra;
 };
-
+// Chương trình chính 
 int main ();
-void nhap (GiayBac &);
-void xuat (GiayBac);
-void chiatien (GiayBac &, GiayBac);
+
+// Hàm nhập
+void nhap (GiayBac &); // 
+
+// Hàm xuất
+void xuat (GiayBac); // 
+
+//Hàm tính toán số tiền ít nhất 
+void chiatien (GiayBac &, GiayBac); 
+
+//Hàm sắp xếp mênh giá các tờ tiền từ lớn > thấp
 void sapxep (GiayBac &);
-void khoitao (GiayBac &);
+
+//Ham Khởi tạo
+void khoitao (GiayBac &); 
+
+/* NỘI DUNG */ 
 
 int main () {
-  GiayBac Tien, SoTienRut;
+  GiayBac Tien, SoTienRut; 
 	khoitao(Tien);
 	khoitao(SoTienRut);
 	nhap(Tien);
@@ -43,19 +55,16 @@ void nhap (GiayBac & Tien) {
 }
 
 void xuat (GiayBac SoTienRut) {
-	if (SoTienRut.KiemTra == true )
-	{
-	for(int i = 0; i < SoTienRut.SoLuong; i++)
-	{
-		if ( SoTienRut.SoTo[i] == 0 )
-			continue;
-		cout<<"Menh gia:"<<SoTienRut.LoaiTien[i];
-		cout<<" - So To :"<<SoTienRut.SoTo[i];
-		cout<<endl;
+	if (SoTienRut.KiemTra == true ){
+	  for(int i = 0; i < SoTienRut.SoLuong; i++){
+	  	if ( SoTienRut.SoTo[i] == 0 ) continue;
+	  	cout<<"Menh gia:"<<SoTienRut.LoaiTien[i];
+		  cout<<" - So To :"<<SoTienRut.SoTo[i];
+		  cout<<endl;
+  	}
 	}
-	}
-	else
-	cout<<"Khong doi duoc";
+	else 
+  	cout<<"Khong doi duoc";
 }
 
 void sapxep (GiayBac &Tien){
@@ -71,8 +80,7 @@ void khoitao(GiayBac &Tien){
 }
 
 
-void chiatien(GiayBac &SoTienRut,GiayBac Tien)
-{
+void chiatien(GiayBac &SoTienRut,GiayBac Tien){
 	SoTienRut.KiemTra = true;
 	int tiengoc = Tien.SoTienKhachHang;
 	for(unsigned i = 0; tiengoc != 0; ++i){
@@ -81,11 +89,9 @@ void chiatien(GiayBac &SoTienRut,GiayBac Tien)
 		SoTienRut.SoLuong++;
 		tiengoc -= SoTienRut.SoTo[i] * Tien.LoaiTien[i];
 		if ( SoTienRut.SoLuong == Tien.SoLuong )
-			if ( tiengoc > 0 )
-			{
+			if (tiengoc > 0){
 				SoTienRut.KiemTra = false;
-				break;
+			 	break;
 			}
 	}
-	
 }
