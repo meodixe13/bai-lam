@@ -78,7 +78,7 @@ void themkeo (TapGoiKeo & nguoinhan, unsigned sokeo) {
 void nhap (TapGoiKeo &nguon) {
   cout << "Nhap so goi keo (<50): ";
   cin >> nguon.soluong;
-  for(unsigned i = 0; i < nguon.soluong; i++) {
+  for (unsigned i = 0; i < nguon.soluong; i++) {
     unsigned goikeo;
     cout <<"Nhap so luong goi keo thu " << i << ": ";
     cin >> goikeo;
